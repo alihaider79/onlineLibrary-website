@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,12 +8,12 @@ const Navbar = () => {
     <nav className="bg-gray-800">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img src="/logo2.png" alt="Logo" className="h-8 w-8 mr-2" />
             <span className="font-bold text-red-600 text-xl">
               Online Library
             </span>
-          </a>
+          </Link>
         </div>
 
         <button
@@ -36,60 +37,59 @@ const Navbar = () => {
         </button>
 
         <div className="hidden lg:flex lg:items-center lg:space-x-4">
-          <a
+          <Link
             href="/"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/find"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Find Books
-          </a>
-          <a
+          </Link>
+          <Link
             href="/services"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Contact
-          </a>
+          </Link>
         </div>
 
-        {/* Dropdown menu for mobile */}
         <div
           className={`lg:hidden ${isOpen ? "block" : "hidden"} absolute top-16 left-0 w-full bg-gray-800 border-t border-gray-700`}
         >
-          <a
+          <Link
             href="/"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/find"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Find Books
-          </a>
-          <a
+          </Link>
+          <Link
             href="/services"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
