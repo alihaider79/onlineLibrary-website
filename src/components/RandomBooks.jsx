@@ -49,15 +49,17 @@ const RandomBooks = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 flex flex-col items-center justify-center p-8">
-      <div className="w-full max-w-screen-lg flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Random Books</h2>
+    <div className="bg-gray-100 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10">
+      <div className="w-full max-w-screen-lg flex flex-col sm:flex-row justify-between items-center mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-0">
+          Random Books
+        </h2>
         <button
           onClick={fetchRandomBooks}
           className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded disabled:opacity-25 disabled:cursor-not-allowed"
           disabled={loading}
         >
-          Random
+          {loading ? "Loading..." : "Random"}
         </button>
       </div>
       {loading && (
@@ -68,7 +70,7 @@ const RandomBooks = () => {
 
       {randomBooks.length > 0 && (
         <div className="w-full max-w-screen-lg">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
             {randomBooks.map((book, index) => (
               <div
                 key={index}
@@ -78,7 +80,7 @@ const RandomBooks = () => {
                   <img
                     src={`https://covers.openlibrary.org/b/id/${book.coverId}-M.jpg`}
                     alt={`${book.name} cover`}
-                    className="w-full h-40 mb-2 rounded"
+                    className="w-full h-40 mb-2 rounded object-contain "
                   />
                 ) : (
                   <div className="w-full h-40 bg-gray-200 mb-2 rounded flex items-center justify-center">
