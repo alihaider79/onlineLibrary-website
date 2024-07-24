@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="bg-gray-800">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src="/logo2.png" alt="Logo" className="h-8 w-8 mr-2" />
             <span className="font-bold text-red-600 text-xl">
               Online Library
@@ -38,25 +38,25 @@ const Navbar = () => {
 
         <div className="hidden lg:flex lg:items-center lg:space-x-4">
           <Link
-            href="/"
+            to="/"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Home
           </Link>
           <Link
-            href="/find"
+            to="/find"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Find Books
           </Link>
           <Link
-            href="/services"
+            to="/services"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Services
           </Link>
           <Link
-            href="/contact"
+            to="/contact"
             className="text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Contact
@@ -67,25 +67,25 @@ const Navbar = () => {
           className={`lg:hidden ${isOpen ? "block" : "hidden"} absolute top-16 left-0 w-full bg-gray-800 border-t border-gray-700`}
         >
           <Link
-            href="/"
+            to="/"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Home
           </Link>
           <Link
-            href="/find"
+            to="/find"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Find Books
           </Link>
           <Link
-            href="/services"
+            to="/services"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Services
           </Link>
           <Link
-            href="/contact"
+            to="/contact"
             className="block text-white hover:text-red-600 px-3 py-2 rounded-md hover:bg-white"
           >
             Contact
